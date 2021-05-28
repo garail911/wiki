@@ -5,7 +5,7 @@
          version="5.0">
 
     <servlet>
-        <servlet-name>main-servlet</servlet-name>
+        <servlet-name>frontServlet</servlet-name>
         <servlet-class>tech.itpark.servlet.FrontServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
         <init-param>
@@ -15,7 +15,7 @@
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>main-servlet</servlet-name>
+        <servlet-name>frontServlet</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 
@@ -26,7 +26,7 @@
 
     <filter-mapping>
         <filter-name>auth</filter-name>
-        <servlet-name>main-servlet</servlet-name>
+        <servlet-name>frontServlet</servlet-name>
     </filter-mapping>
 
     <resource-ref>

@@ -29,9 +29,9 @@ public class AuthFilter extends HttpFilter {
 
 
     final var servletPath = req.getServletPath();
-    final var queriesPermissions = (Map<String, Set<String>>) context.getBean("queriesPermissions");
-    if (queriesPermissions.containsKey(servletPath)){
-      final var roles = queriesPermissions.get(servletPath).toArray(String[]::new);
+    final var accessRoles = (Map<String, Set<String>>) context.getBean("accessRoles");
+    if (accessRoles.containsKey(servletPath)){
+      final var roles = accessRoles.get(servletPath).toArray(String[]::new);
       if (!auth.hasAnyRole(roles)){
         throw new PermissionDeniedException("OPERATION NOT ALLOWED !!!");
       }
