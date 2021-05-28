@@ -21,7 +21,6 @@ public class PasswordHasherDefaultImpl implements PasswordHasher {
     final var hash = digest.digest((saltHex + separator + raw).getBytes(StandardCharsets.UTF_8));
     final var hashHex = Hex.encode(hash);
     return saltHex + separator + hashHex;
-    // TODO: hex(salt) : hex(hash(hex(salt) : raw)))
   }
 
   @Override

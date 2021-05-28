@@ -84,8 +84,6 @@ public class AppConfiguration {
         return Map.ofEntries(
                 new AbstractMap.SimpleEntry<>("/api/auth/delete", Set.of(Roles.ROLE_ADMIN, Roles.ROLE_MODERATOR, Roles.ROLE_USER)),
 
-                new AbstractMap.SimpleEntry<>("/api/users/roles", Set.of(Roles.ROLE_ADMIN)),
-
                 new AbstractMap.SimpleEntry<>("/api/wiki", Set.of(Roles.ROLE_ANONYMOUS, Roles.ROLE_USER, Roles.ROLE_MODERATOR, Roles.ROLE_ADMIN))
         );
     }
