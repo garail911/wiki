@@ -10,7 +10,7 @@ import tech.itpark.dto.wiki.WikiSaveRequestDto;
 import tech.itpark.dto.wiki.WikiUpdateRequestDto;
 import tech.itpark.http.ContentTypes;
 import tech.itpark.security.HttpServletRequestAuthToken;
-import tech.itpark.service.WikiService;
+import tech.itpark.service.WikiServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class WikiControllerImpl implements WikiController {
-    private final WikiService service;
+    private final WikiServiceImpl service;
     private final List<BodyConverter> converters;
 
     @Override

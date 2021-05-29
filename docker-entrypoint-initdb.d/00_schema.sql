@@ -4,7 +4,7 @@ CREATE TABLE users
     login    TEXT      NOT NULL UNIQUE,
     password TEXT      NOT NULL,
     secret   TEXT      NOT NULL,
-    removed  BOOLEAN   NOT NULL DEFAULT FALSE,
+    removed  BOOLEAN   NOT NULL DEFAULT FALSE
 --     created  TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 

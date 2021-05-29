@@ -8,7 +8,7 @@ import tech.itpark.bodyconverter.BodyConverter;
 import tech.itpark.dto.user.*;
 import tech.itpark.http.ContentTypes;
 import tech.itpark.security.HttpServletRequestAuthToken;
-import tech.itpark.service.UserService;
+import tech.itpark.service.UserServiceImpl;
 
 import java.io.IOException;
 import java.util.List;
@@ -16,7 +16,7 @@ import java.util.List;
 @Controller
 @RequiredArgsConstructor
 public class UserControllerImpl implements UserController {
-  private final UserService service;
+  private final UserServiceImpl service;
   private final List<BodyConverter> converters;
 
   @Override
